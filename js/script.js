@@ -14,13 +14,19 @@ var reset = $("#reset");
 var addScore = function (player) {
   player.html(parseInt(player.html()) + 1);
 };
-player1.on("click", function () {
+player1.on("click touchstart", function (event) {
+  event.stopPropagation();
+  event.preventDefault();
   addScore(player1Value);
 });
-player2.on("click", function () {
+player2.on("click touchstart", function (event) {
+  event.stopPropagation();
+  event.preventDefault();
   addScore(player2Value);
 });
-reset.on("click", function () {
+reset.on("click touchstart", function (event) {
+  event.stopPropagation();
+  event.preventDefault();
   if (confirm("Es-tu sur de vouloir reset ?")) {
     init();
   }
