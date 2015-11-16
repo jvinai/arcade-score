@@ -1,0 +1,36 @@
+body {
+    background-image: url('./../images/Garou-mark-of-the-wolves-logo.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+}
+
+.container {
+    padding: 10px;
+}
+
+.player {
+    height: 250px;
+}
+
+#player1, #player2 {
+    border: 3px black solid;
+    font-size: 48px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+#reset {
+    border: 3px black solid;
+    font-size: 48px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer {
+    text-align: center;
+}

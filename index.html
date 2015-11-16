@@ -4,61 +4,19 @@
   <meta charset="UTF-8">
   <title></title>
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <style>
-    .container {
-      padding: 10px;
-    }
-    .player {
-      height: 250px;
-    }
-    #player1, #player2 {
-      display: inline-block;
-      width: 48%;
-      border: 3px black solid;
-      font-size: 48px;
-      text-align: center;
-      height: 100%;
-    }
-    #reset {
-      border: 3px black solid;
-      font-size: 48px;
-      text-align: center;
-      width: 96%;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="style/css/style.css">
 </head>
 <body>
 <div class="container player">
-  <div class="col-lg-2" id="player1"></div><div class="col-lg-2" id="player2"></div>
-</div>
-<div class="container">
+  <div class="col-md-6" id="player1"><span id="player1-value"></span></div>
+  <div class="col-md-6" id="player2"><span id="player2-value"></span></div>
   <div id="reset">
     RESET
   </div>
 </div>
 
-<script>
-  var player1 = $("#player1");
-  var player2 = $("#player2");
-
-  var init = function () {
-    player1.html("0");
-    player2.html("0");
-  };
-  init();
-  var reset = $("#reset");
-  var addScore = function (player) {
-    player.html(parseInt(player.html()) + 1);
-  };
-  player1.on("click", function () {
-    addScore(player1);
-  });
-  player2.on("click", function () {
-    addScore(player2);
-  });
-  reset.on("click", function () {
-    init()
-  });
-</script>
+<script src="js/script.js"></script>
 </body>
 </html>
